@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon api/src/index.js",
-    "start": "node api/src/index.js"
+    "dev": "tsx watch api/src/index.ts",
+    "build": "tsc -p .",
+    "start": "node dist/api/src/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,21 @@
   },
   "homepage": "https://github.com/AbdelhakimEKT/RendezPro#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.54.0",
     "cors": "^2.8.5",
-    "express": "^5.1.0"
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.5",
+    "resend": "^6.0.1",
+    "zod": "^4.0.16"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "@types/nodemailer": "^6.4.17",
+    "nodemon": "^3.1.10",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
   }
 }
